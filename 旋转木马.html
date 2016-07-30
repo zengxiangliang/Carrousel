@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        旋转木马
+    </title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        overflow: hidden;
+        background-color: #ccc;
+    }
+    .stage {
+        -webkit-perspective: 10rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 3rem;
+        height: 2rem;
+        margin-left: -1.5rem;
+        margin-top: -1rem;
+    }
+    
+    .box {
+        width: 100%;
+        height: 100%;
+        -webkit-transform-style: preserve-3d;
+        -webkit-transition: transform .4s;
+    }
+    
+    .box li {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        list-style: none;
+        opacity: .8;
+        font-size: 40px;
+        text-align: center;
+        cursor: pointer;
+    }
+    
+    .box li:nth-child(1) {
+        background-color: #f00;
+    }
+    
+    .box li:nth-child(2) {
+        background-color: #0f0;
+    }
+    
+    .box li:nth-child(3) {
+        background-color: #00f;
+    }
+    
+    .box li:nth-child(4) {
+        background-color: #ff0;
+    }
+    
+    .box li:nth-child(5) {
+        background-color: #0ff;
+    }
+    
+    .box li:nth-child(6) {
+        background-color: #f0f;
+    }
+    </style>
+    </meta>
+</head>
+
+<body>
+    <div class="stage">
+        <ul class="box">
+            <li class="items">
+                1
+            </li>
+            <li class="items">
+                2
+            </li>
+            <li class="items">
+                3
+            </li>
+            <li class="items">
+                4
+            </li>
+            <li class="items">
+                5
+            </li>
+            <li class="items">
+                6
+            </li>
+        </ul>
+    </div>
+    <script type="text/javascript" src="carrousel.js"></script>
+    <script type="text/javascript">
+    (function(){var script=document.createElement('script');script.onload=function(){var stats=new Stats();document.body.appendChild(stats.dom);requestAnimationFrame(function loop(){stats.update();requestAnimationFrame(loop)});};script.src='//rawgit.com/mrdoob/stats.js/master/build/stats.min.js';document.head.appendChild(script);})()
+        function resizeEvt(){
+            var ww = document.documentElement.clientWidth;
+            var fontSize = ww/750*100;
+            document.documentElement.style.fontSize = fontSize+'px'
+        }
+        document.addEventListener('DOMContentLoaded',resizeEvt,false);
+        window.addEventListener('resize',resizeEvt,false);
+        new Carrousel();
+    </script>
+</body>
+
+</html>
