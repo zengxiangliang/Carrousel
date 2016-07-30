@@ -4,7 +4,7 @@
 此项目为主要以手机端为主的3D轮播效果，左右滑动可以切换图片。<br>
 [效果演示](http://zengxiangliang.github.io/works/demo/Carrousel/carrousel.html)
 ### 插件介绍：
-此插件可以根据items的个数来自动rotateY的旋转角度计算，也可以通过css来写，但是如果是css来写的话就不需要在Carrouse.prototype.init()中调用
+此插件可以根据`items`的个数来自动`rotateY`的旋转角度计算，也可以通过`css`来写，但是如果是css来写的话就不需要在`Carrouse.prototype.init()`中调用
 ```
 this.setItemsRotate();
 ```
