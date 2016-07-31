@@ -137,10 +137,13 @@
     document.addEventListener('touchmove',function(e){
         e.preventDefault();
     },false)
-    new Carrousel({
+    var c = new Carrousel({
         pagination:'.pagination',
         isLoop:true
     });
+    c.endFn(function(){
+        console.log(1);
+    })
     </script>
 </body>
 

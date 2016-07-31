@@ -2,7 +2,7 @@
  * @Author: Administrator
  * @Date:   2016-07-30 11:51:33
  * @Last Modified by:   Administrator
- * @Last Modified time: 2016-07-30 20:34:36
+ * @Last Modified time: 2016-07-31 13:05:03
  */
 
 'use strict';
@@ -124,10 +124,10 @@ window.Carrousel = function(w, d) {
 	            timer = setInterval(_loop,_this.time)
             }
         },
-        endFn:function(fn){
+        endFn:function(callback){
         	var trEndEvent = 'webkitTransitionEnd' || 'MozTransitionEnd' ||'transitionEnd';
         	document.querySelector(this.box).addEventListener(trEndEvent,function(){
-        		fn();
+        		callback();
         	},false)
         },
         paginationFn:function(){
