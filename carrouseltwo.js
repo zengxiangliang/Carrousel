@@ -1,8 +1,8 @@
 /*
  * @Author: Administrator
  * @Date:   2016-07-30 11:51:33
- * @Last Modified by: xiangliang.zeng
- * @Last Modified time: 2017-02-18 15:51:52
+ * @Last Modified by:   Administrator
+ * @Last Modified time: 2016-07-31 13:05:03
  */
 
 'use strict';
@@ -127,7 +127,7 @@ window.Carrousel = function(w, d) {
         endFn:function(callback){
         	var trEndEvent = 'webkitTransitionEnd' || 'MozTransitionEnd' ||'transitionEnd';
         	document.querySelector(this.box).addEventListener(trEndEvent,function(){
-        		typeof callback === 'function' && callback();
+        		callback();
         	},false)
         },
         paginationFn:function(){
